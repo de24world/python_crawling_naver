@@ -18,6 +18,7 @@ n = 1
 for i in img:
     imgUrl = i['data-source']
     with urlopen(imgUrl) as f:
+        # you must create folder as a 'img'
         with open('./img/' + plusUrl + str(n) + '.jpg', 'wb') as h:
             img = f.read()
             h.write(img)
@@ -25,3 +26,7 @@ for i in img:
     print(imgUrl)
 
 print('Download Complete')
+
+
+# orign video
+# https://www.youtube.com/watch?v=_wRTyQYjHcg&t=327s
